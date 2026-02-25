@@ -1,13 +1,14 @@
+import Image from 'next/image';
+
 const highlights = [
-  { metric: '14 yrs', label: 'at the ASPCA' },
+  { metric: '14 yrs', label: 'ASPCA' },
   { metric: '$17M+', label: 'revenue driven' },
-  { metric: '2', label: 'live ventures built' },
+  { metric: '3', label: 'ventures built' },
 ];
 
 export default function Founder() {
   return (
     <section id="founder" className="py-24 lg:py-32 relative">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-space-light/50 to-transparent pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
@@ -17,15 +18,18 @@ export default function Founder() {
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
-          {/* Avatar + stats */}
+          {/* Photo + stats */}
           <div className="lg:col-span-2 flex flex-col items-start gap-8">
-            {/* Avatar */}
+            {/* Photo */}
             <div className="relative">
-              <div
-                className="w-24 h-24 rounded-2xl flex items-center justify-center text-3xl font-extrabold text-white"
-                style={{ background: 'linear-gradient(135deg, #7B2FF7 0%, #00D4FF 100%)' }}
-              >
-                KW
+              <div className="w-28 h-28 rounded-2xl overflow-hidden ring-2 ring-white/10">
+                <Image
+                  src="/myphoto.webp"
+                  alt="Kishia Wolfe"
+                  width={112}
+                  height={112}
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <div className="absolute -bottom-2 -right-2 w-6 h-6 rounded-full bg-green-400 border-2 border-deep-space" />
             </div>
@@ -38,7 +42,7 @@ export default function Founder() {
             </div>
 
             {/* Highlights */}
-            <div className="grid grid-cols-3 gap-4 w-full">
+            <div className="grid grid-cols-3 gap-3 w-full">
               {highlights.map((h) => (
                 <div key={h.label} className="bg-space-mid border border-white/5 rounded-xl p-4 text-center">
                   <p className="text-xl font-extrabold gradient-text">{h.metric}</p>
@@ -62,25 +66,10 @@ export default function Founder() {
               most affected by them.
             </p>
             <p>
-              In eight months, she built two live products from scratch —{' '}
-              <a
-                href="https://focusedflow.io"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-av-purple hover:text-av-cyan transition-colors font-semibold"
-              >
-                Focused Flow
-              </a>
-              {' '}and{' '}
-              <a
-                href="https://aitheralabs.co.uk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-av-cyan hover:text-white transition-colors font-semibold"
-              >
-                Aithera Labs
-              </a>
-              {' '}— both with working infrastructure, real users, and a clear path to revenue.
+              In under a year, she built three live products from scratch —{' '}
+              <a href="https://focusedflow.io" target="_blank" rel="noopener noreferrer" className="text-av-purple hover:text-av-cyan transition-colors font-semibold">Focused Flow</a>,{' '}
+              <a href="https://aitheralabs.co.uk" target="_blank" rel="noopener noreferrer" className="text-av-cyan hover:text-white transition-colors font-semibold">Aithera Labs</a>,{' '}
+              and <span className="text-orange-400 font-semibold">Paws &amp; Pace</span> — each with working infrastructure, real users, and a clear path to revenue.
             </p>
             <div className="pt-2">
               <a
