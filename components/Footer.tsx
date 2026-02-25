@@ -34,6 +34,12 @@ export default function Footer() {
             <p className="text-av-slate/30 text-xs">
               © {year} Ascendant Ventures Ltd. All rights reserved.
             </p>
+            <p className="text-av-slate/25 text-xs">
+              66 Paul Street, London, EC2A 4NA ·{' '}
+              <a href="tel:+442045722832" className="hover:text-av-slate/50 transition-colors">
+                +44 020 4572 2832
+              </a>
+            </p>
           </div>
         </div>
       </div>

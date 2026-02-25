@@ -38,17 +38,23 @@ export default function Contact() {
         {/* CTA */}
         <a
           href="mailto:contact@ascendantventures.co.uk"
-          className="inline-flex items-center gap-3 bg-av-gradient text-white font-bold px-10 py-4 rounded-full text-lg hover:opacity-90 transition-all hover:scale-105 hover:shadow-xl hover:shadow-av-purple/20"
+          className="inline-flex items-center gap-2 bg-av-gradient text-white font-bold px-6 py-3 sm:px-10 sm:py-4 rounded-full text-sm sm:text-lg hover:opacity-90 transition-all hover:scale-105 hover:shadow-xl hover:shadow-av-purple/20"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
           contact@ascendantventures.co.uk
         </a>
 
-        <p className="text-av-slate/40 text-sm mt-6">
-          Registered in England and Wales · Ascendant Ventures Ltd
-        </p>
+        <div className="text-av-slate/40 text-sm mt-6 space-y-1">
+          <p>Registered in England and Wales · Ascendant Ventures Ltd</p>
+          <p>66 Paul Street, London, EC2A 4NA</p>
+          <p>
+            <a href="tel:+442045722832" className="hover:text-av-slate/70 transition-colors">
+              +44 020 4572 2832
+            </a>
+          </p>
+        </div>
       </div>
     </section>
   );
