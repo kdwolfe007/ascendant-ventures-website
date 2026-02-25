@@ -10,9 +10,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo + name */}
           <div className="flex items-center gap-3">
-            <div className="bg-white rounded-lg p-1 w-7 h-7 flex items-center justify-center flex-shrink-0">
-              <Image src="/logoascendant.png" alt="Ascendant Ventures" width={20} height={20} className="w-5 h-5 object-contain opacity-80" />
-            </div>
+            <Image src="/atransfinal.png" alt="Ascendant Ventures" width={24} height={24} className="w-6 h-6 object-contain opacity-80 flex-shrink-0" />
             <span className="text-av-slate/60 text-sm font-medium">Ascendant Ventures Ltd</span>
           </div>
 

@@ -25,7 +25,7 @@ const ventures: Venture[] = [
     status: 'Live on iOS',
     statusColor: 'text-green-400 bg-green-400/10 border-green-400/20',
     platforms: ['iOS', 'Android soon'],
-    logo: '/focusedflow.png',
+    logo: '/fftransfinal.png',
     accent: '#0d9488',
     accentLight: 'rgba(13,148,136,0.12)',
   },
@@ -39,7 +39,7 @@ const ventures: Venture[] = [
     status: 'Live · Testing',
     statusColor: 'text-av-cyan bg-av-cyan/10 border-av-cyan/20',
     platforms: ['Web'],
-    logo: '/aithera.svg',
+    logo: '/aitheratransfinal.png',
     accent: '#00D4FF',
     accentLight: 'rgba(0,212,255,0.10)',
   },
@@ -53,7 +53,7 @@ const ventures: Venture[] = [
     status: 'Live on iOS',
     statusColor: 'text-green-400 bg-green-400/10 border-green-400/20',
     platforms: ['iOS', 'Android soon'],
-    logo: '/pawsandpace.png',
+    logo: '/paptransfinal.png',
     accent: '#F97316',
     accentLight: 'rgba(249,115,22,0.12)',
   },
@@ -91,7 +91,8 @@ export default function Ventures() {
                 <div className="flex items-start justify-between mb-6 gap-3">
                   {/* Logo icon */}
                   <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 bg-white p-1.5"
+                    className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden p-1.5"
+                    style={{ background: v.accentLight }}
                   >
                     <Image
                       src={v.logo}

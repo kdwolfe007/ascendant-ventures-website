@@ -29,9 +29,7 @@ export default function Nav() {
       <nav className="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
         <a href="/" className="flex items-center gap-3 group">
-          <div className="bg-white rounded-xl p-1 flex-shrink-0 w-9 h-9 flex items-center justify-center">
-            <Image src="/logoascendant.png" alt="Ascendant Ventures" width={28} height={28} className="w-7 h-7 object-contain" />
-          </div>
+          <Image src="/atransfinal.png" alt="Ascendant Ventures" width={32} height={32} className="w-8 h-8 object-contain flex-shrink-0" />
           <span className="font-bold text-base tracking-tight text-white group-hover:text-av-cyan transition-colors">
             Ascendant Ventures
           </span>
