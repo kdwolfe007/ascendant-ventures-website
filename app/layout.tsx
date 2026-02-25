@@ -24,6 +24,10 @@ export const metadata: Metadata = {
     title: 'Ascendant Ventures',
     description: 'Building AI and climate technology companies that matter.',
   },
+  icons: {
+    icon: '/atransfinal.png',
+    apple: '/atransfinal.png',
+  },
   alternates: {
     canonical: 'https://ascendantventures.co.uk',
   },
