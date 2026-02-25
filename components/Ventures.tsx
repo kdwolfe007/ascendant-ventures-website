@@ -61,12 +61,12 @@ const ventures: Venture[] = [
 
 export default function Ventures() {
   return (
-    <section id="ventures" className="py-24 lg:py-32 relative">
+    <section id="ventures" className="py-14 lg:py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-av-purple/5 to-transparent pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-16">
+        <div className="mb-10">
           <p className="text-av-cyan text-xs font-bold tracking-widest uppercase mb-3">Portfolio</p>
           <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
             Our ventures

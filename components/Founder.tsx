@@ -8,18 +8,18 @@ const highlights = [
 
 export default function Founder() {
   return (
-    <section id="founder" className="py-24 lg:py-32 relative">
+    <section id="founder" className="py-14 lg:py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-space-light/50 to-transparent pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
         <p className="text-av-cyan text-xs font-bold tracking-widest uppercase mb-3">Founder</p>
-        <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight mb-12">
+        <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight mb-8">
           The person behind it.
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
           {/* Photo + stats */}
-          <div className="lg:col-span-2 flex flex-col items-start gap-8">
+          <div className="lg:col-span-2 flex flex-col items-start gap-6">
             {/* Photo */}
             <div className="relative">
               <div className="w-28 h-28 rounded-2xl overflow-hidden ring-2 ring-white/10">
@@ -73,13 +73,13 @@ export default function Founder() {
             </p>
             <div className="pt-2">
               <a
-                href="mailto:hello@ascendantventures.co.uk"
+                href="mailto:contact@ascendantventures.co.uk"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-white/70 hover:text-white transition-colors border border-white/10 hover:border-white/25 px-5 py-2.5 rounded-full"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                hello@ascendantventures.co.uk
+                contact@ascendantventures.co.uk
               </a>
             </div>
           </div>

@@ -103,8 +103,8 @@ export default function TermsPage() {
             <h2 className="text-white font-bold text-lg mb-3">8. Contact</h2>
             <p>
               Questions about these terms:{' '}
-              <a href="mailto:hello@ascendantventures.co.uk" className="text-av-cyan hover:underline">
-                hello@ascendantventures.co.uk
+              <a href="mailto:contact@ascendantventures.co.uk" className="text-av-cyan hover:underline">
+                contact@ascendantventures.co.uk
               </a>
             </p>
           </section>

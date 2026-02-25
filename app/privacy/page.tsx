@@ -40,8 +40,8 @@ export default function PrivacyPage() {
             </p>
             <p className="mt-3">
               Contact:{' '}
-              <a href="mailto:hello@ascendantventures.co.uk" className="text-av-cyan hover:underline">
-                hello@ascendantventures.co.uk
+              <a href="mailto:contact@ascendantventures.co.uk" className="text-av-cyan hover:underline">
+                contact@ascendantventures.co.uk
               </a>
             </p>
           </section>
@@ -107,8 +107,8 @@ export default function PrivacyPage() {
             </ul>
             <p className="mt-3">
               To exercise any of these rights, email{' '}
-              <a href="mailto:hello@ascendantventures.co.uk" className="text-av-cyan hover:underline">
-                hello@ascendantventures.co.uk
+              <a href="mailto:contact@ascendantventures.co.uk" className="text-av-cyan hover:underline">
+                contact@ascendantventures.co.uk
               </a>.
             </p>
           </section>

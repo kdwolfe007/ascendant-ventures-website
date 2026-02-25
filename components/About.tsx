@@ -19,16 +19,16 @@ const principles = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 lg:py-32 relative">
+    <section id="about" className="py-14 lg:py-20 relative">
       {/* Divider line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-av-purple/30" />
 
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* Left — copy */}
           <div>
             <p className="text-av-cyan text-xs font-bold tracking-widest uppercase mb-3">About</p>
-            <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
               Founder-led.{' '}
               <span className="gradient-text">Mission-driven.</span>
             </h2>

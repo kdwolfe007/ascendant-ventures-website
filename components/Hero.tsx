@@ -15,9 +15,9 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center pt-24">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center pt-24 pb-8">
         {/* Eyebrow */}
-        <div className="inline-flex items-center gap-2 border border-av-cyan/20 bg-av-cyan/5 text-av-cyan text-xs font-semibold px-4 py-1.5 rounded-full mb-8 tracking-widest uppercase">
+        <div className="inline-flex items-center gap-2 border border-av-cyan/20 bg-av-cyan/5 text-av-cyan text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">
           <span className="w-1.5 h-1.5 rounded-full bg-av-cyan animate-pulse" />
           Venture Studio
         </div>
@@ -30,7 +30,7 @@ export default function Hero() {
         </h1>
 
         {/* Subhead */}
-        <p className="text-av-slate text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-12">
+        <p className="text-av-slate text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-8">
           Ascendant Ventures is a founder-led studio creating technology companies at the
           intersection of AI, climate resilience, and inclusive design.
         </p>
@@ -52,7 +52,7 @@ export default function Hero() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="mt-20 flex flex-col items-center gap-2 text-av-slate/40">
+        <div className="mt-12 flex flex-col items-center gap-2 text-av-slate/40">
           <span className="text-xs tracking-widest uppercase">Scroll</span>
           <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
