@@ -3,6 +3,7 @@ import Ventures from '@/components/Ventures';
 import About from '@/components/About';
 import Founder from '@/components/Founder';
 import Contact from '@/components/Contact';
+import Newsletter from '@/components/Newsletter';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Founder />
       <Contact />
+      <Newsletter />
     </>
   );
 }
