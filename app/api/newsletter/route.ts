@@ -20,6 +20,7 @@ export async function POST(req: NextRequest) {
   const customerId = encodeURIComponent(email.toLowerCase().trim());
 
   const body: Record<string, unknown> = {
+    id: email.toLowerCase().trim(),
     email: email.toLowerCase().trim(),
     newsletter_subscribed: true,
     newsletter_source: 'ascendant_website',
