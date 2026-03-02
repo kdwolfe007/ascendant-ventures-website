@@ -49,5 +49,24 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Could not subscribe. Please try again.' }, { status: 502 });
   }
 
+  // Fire event to trigger welcome journey
+  await fetch(
+    `https://track.customer.io/api/v1/customers/${customerId}/events`,
+    {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${credentials}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: 'newsletter_signup',
+        data: {
+          source: 'ascendant_website',
+          name: (name && typeof name === 'string' && name.trim()) ? name.trim() : '',
+        },
+      }),
+    },
+  );
+
   return NextResponse.json({ ok: true });
 }
