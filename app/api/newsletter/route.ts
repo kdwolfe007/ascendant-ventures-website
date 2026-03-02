@@ -17,10 +17,11 @@ export async function POST(req: NextRequest) {
   }
 
   const credentials = Buffer.from(`${siteId}:${apiKey}`).toString('base64');
-  const customerId = encodeURIComponent(email.toLowerCase().trim());
+  const { randomUUID } = await import('crypto');
+  const customerId = randomUUID();
 
   const body: Record<string, unknown> = {
-    id: email.toLowerCase().trim(),
+    id: customerId,
     email: email.toLowerCase().trim(),
     newsletter_subscribed: true,
     newsletter_source: 'ascendant_website',
