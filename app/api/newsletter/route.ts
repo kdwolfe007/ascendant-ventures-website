@@ -48,6 +48,7 @@ export async function POST(req: NextRequest) {
     newsletter_gdpr_consent: true,
     newsletter_gdpr_consent_at: new Date().toISOString(),
     newsletter_source: 'ascendant_website',
+    verification_url: confirmUrl,
     created_at: Math.floor(Date.now() / 1000),
   };
   if (name && typeof name === 'string' && name.trim()) {
