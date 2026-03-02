@@ -38,7 +38,7 @@ export default function Founder() {
             <div>
               <h3 className="text-2xl font-bold text-white mb-1">Kishia Wolfe</h3>
               <p className="text-av-cyan font-semibold text-sm">Founder &amp; CEO</p>
-              <p className="text-av-slate/60 text-xs mt-1">Ascendant Ventures Ltd · London</p>
+              <p className="text-av-slate/75 text-xs mt-1">Ascendant Ventures Ltd · London</p>
             </div>
 
             {/* Highlights */}
@@ -46,7 +46,7 @@ export default function Founder() {
               {highlights.map((h) => (
                 <div key={h.label} className="bg-space-mid border border-white/5 rounded-xl p-4 text-center">
                   <p className="text-xl font-extrabold gradient-text">{h.metric}</p>
-                  <p className="text-av-slate/70 text-xs mt-1 leading-tight">{h.label}</p>
+                  <p className="text-av-slate/80 text-xs mt-1 leading-tight">{h.label}</p>
                 </div>
               ))}
             </div>
@@ -74,9 +74,9 @@ export default function Founder() {
             <div className="pt-2">
               <a
                 href="mailto:contact@ascendantventures.co.uk"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-white/70 hover:text-white transition-colors border border-white/10 hover:border-white/25 px-5 py-2.5 rounded-full"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-white/85 hover:text-white transition-colors border border-white/20 hover:border-white/35 px-5 py-2.5 rounded-full"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 contact@ascendantventures.co.uk

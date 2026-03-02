@@ -52,9 +52,9 @@ export default function Hero() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="mt-12 flex flex-col items-center gap-2 text-av-slate/40">
+        <div className="mt-12 flex flex-col items-center gap-2 text-av-slate/60" aria-hidden="true">
           <span className="text-xs tracking-widest uppercase">Scroll</span>
-          <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
           </svg>
         </div>

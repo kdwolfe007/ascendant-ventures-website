@@ -17,7 +17,7 @@ interface Venture {
 const ventures: Venture[] = [
   {
     name: 'Focused Flow',
-    tagline: 'Walk Smarter. Know Your ADHD Better.',
+    tagline: 'AI-Powered Productivity for ADHD Minds.',
     description:
       'An AI coaching companion for people with ADHD — combining personalised task management, habit tracking, a Pomodoro focus timer, and a conversational AI coach into one seamless app. Built for the way ADHD brains actually work.',
     url: 'https://focusedflow.io',
@@ -117,7 +117,7 @@ export default function Ventures() {
                   {v.platforms.map((p) => (
                     <span
                       key={p}
-                      className="text-xs font-medium text-av-slate/60 bg-white/5 border border-white/8 px-2 py-0.5 rounded-full"
+                      className="text-xs font-medium text-av-slate/75 bg-white/5 border border-white/8 px-2 py-0.5 rounded-full"
                     >
                       {p}
                     </span>
@@ -148,12 +148,13 @@ export default function Ventures() {
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
+                      aria-hidden="true"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>
                 ) : (
-                  <span className="text-xs font-medium text-av-slate/40 uppercase tracking-widest">
+                  <span className="text-xs font-medium text-av-slate/60 uppercase tracking-widest">
                     Website coming soon
                   </span>
                 )}

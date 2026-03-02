@@ -59,7 +59,7 @@ export default function About() {
                 className="bg-space-mid border border-white/5 rounded-xl p-5 hover:border-av-purple/25 transition-colors"
               >
                 <div className="flex items-start gap-4">
-                  <span className="text-av-purple/40 font-mono text-xs mt-1 flex-shrink-0">
+                  <span className="text-av-purple/65 font-mono text-xs mt-1 flex-shrink-0">
                     0{i + 1}
                   </span>
                   <div>
