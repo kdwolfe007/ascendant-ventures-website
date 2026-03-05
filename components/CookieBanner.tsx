@@ -40,8 +40,31 @@ export default function CookieBanner() {
 
   return (
     <>
+      {/* Google Consent Mode v2 — default denied, updated on user choice */}
+      <Script id="gcm-default" strategy="beforeInteractive">{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          analytics_storage: 'denied',
+          wait_for_update: 500
+        });
+      `}</Script>
+
       {consent === 'accepted' && (
         <>
+          <Script id="gcm-update-granted" strategy="afterInteractive">{`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'update', {
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              analytics_storage: 'granted'
+            });
+          `}</Script>
           <Script
             src="https://www.googletagmanager.com/gtag/js?id=G-HM5H55T4RL"
             strategy="afterInteractive"
