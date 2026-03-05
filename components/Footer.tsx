@@ -33,6 +33,7 @@ export default function Footer() {
               <Link href="/cookies" className="hover:text-av-slate/70 transition-colors">Cookie Policy</Link>
               <Link href="/terms" className="hover:text-av-slate/70 transition-colors">Terms</Link>
               <Link href="/dsar" className="hover:text-av-slate/70 transition-colors">Data Requests</Link>
+              <Link href="/accessibility" className="hover:text-av-slate/70 transition-colors">Accessibility</Link>
             </div>
             <p className="text-av-slate/60 text-xs">
               © {year} Ascendant Ventures Ltd. All rights reserved.
