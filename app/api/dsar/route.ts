@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createHash } from 'crypto';
 
 export const runtime = 'nodejs';
 
@@ -29,10 +28,8 @@ export async function POST(req: NextRequest) {
 
   const credentials = Buffer.from(`${siteId}:${apiKey}`).toString('base64');
 
-  const customerId = 'dsar_' + createHash('sha256')
-    .update(email.toLowerCase().trim())
-    .digest('hex')
-    .substring(0, 32);
+  const normalizedEmail = email.toLowerCase().trim();
+  const customerId = encodeURIComponent(normalizedEmail);
 
   // Create/update customer record with DSAR attributes
   const customerRes = await fetch(
@@ -44,8 +41,8 @@ export async function POST(req: NextRequest) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        id: customerId,
-        email: email.toLowerCase().trim(),
+        id: normalizedEmail,
+        email: normalizedEmail,
         name: name.trim(),
         dsar_request: true,
         dsar_type: requestType,
@@ -74,7 +71,7 @@ export async function POST(req: NextRequest) {
         data: {
           request_type: requestType,
           requester_name: name.trim(),
-          requester_email: email.toLowerCase().trim(),
+          requester_email: normalizedEmail,
           details: (details && typeof details === 'string') ? details.trim() : '',
           submitted_at: new Date().toISOString(),
         },
