@@ -100,7 +100,17 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-white font-bold text-lg mb-3">8. Contact</h2>
+            <h2 className="text-white font-bold text-lg mb-3">8. Cookies and accessibility</h2>
+            <p>
+              Our use of cookies is governed by our{' '}
+              <Link href="/cookies" className="text-av-cyan hover:underline">Cookie Policy</Link>.
+              Our commitment to web accessibility is set out in our{' '}
+              <Link href="/accessibility" className="text-av-cyan hover:underline">Accessibility Statement</Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-white font-bold text-lg mb-3">9. Contact</h2>
             <p>
               Questions about these terms:{' '}
               <a href="mailto:contact@ascendantventures.co.uk" className="text-av-cyan hover:underline">
