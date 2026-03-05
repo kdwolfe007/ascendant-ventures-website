@@ -6,6 +6,7 @@ import Script from 'next/script';
 export default function CookieBanner() {
   const [consent, setConsent] = useState<'accepted' | 'declined' | null>(null);
   const [visible, setVisible] = useState(false);
+  const [isUpdate, setIsUpdate] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem('av_cookie_consent');
@@ -16,6 +17,13 @@ export default function CookieBanner() {
     } else {
       setVisible(true);
     }
+
+    const handleReopen = () => {
+      setIsUpdate(true);
+      setVisible(true);
+    };
+    window.addEventListener('av:reopen-consent', handleReopen);
+    return () => window.removeEventListener('av:reopen-consent', handleReopen);
   }, []);
 
   const accept = () => {
@@ -51,9 +59,11 @@ export default function CookieBanner() {
         <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/8 bg-deep-space/95 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <p className="text-av-slate text-sm leading-relaxed">
-              We use cookies to understand how people find and use this site.{' '}
-              <a href="/privacy" className="text-av-cyan hover:text-white transition-colors underline underline-offset-2">
-                Privacy Policy
+              {isUpdate
+                ? 'Update your cookie preferences. '
+                : 'We use analytics cookies to understand how people find and use this site. '}
+              <a href="/cookies" className="text-av-cyan hover:text-white transition-colors underline underline-offset-2">
+                Cookie Policy
               </a>
             </p>
             <div className="flex items-center gap-3 flex-shrink-0">

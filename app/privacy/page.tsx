@@ -36,7 +36,7 @@ export default function PrivacyPage() {
               <strong className="text-white/80">ascendantventures.co.uk</strong> (the
               &ldquo;Site&rdquo;), operated by <strong className="text-white/80">Ascendant Ventures Ltd</strong>,
               a company registered in England and Wales (registered address: 66 Paul Street,
-              London EC2A 4NA).
+              London EC2A 4NA). ICO Registration Number: <strong className="text-white/80">ZB916024</strong>.
             </p>
             <p className="mt-3">
               Contact:{' '}
@@ -60,17 +60,28 @@ export default function PrivacyPage() {
             <h2 className="text-white font-bold text-lg mb-3">3. Data we collect</h2>
             <p>
               This Site is a static informational website. We do not operate any sign-up forms,
-              contact forms, newsletter subscriptions, or user accounts through this Site.
+              contact forms, or user accounts through this Site.
             </p>
             <p className="mt-3">
-              The only way you provide us with personal data through this Site is if you choose
-              to email us directly by clicking a <code className="text-av-cyan text-xs bg-white/5 px-1.5 py-0.5 rounded">mailto:</code> link.
-              In that case, your email client handles the data — we receive only what you choose to
-              send in the email.
+              <strong className="text-white/80">Email correspondence:</strong> The only way you
+              provide us with personal data directly is if you choose to email us by clicking a{' '}
+              <code className="text-av-cyan text-xs bg-white/5 px-1.5 py-0.5 rounded">mailto:</code>{' '}
+              link. We receive only what you choose to send.
             </p>
             <p className="mt-3">
-              We do not currently use cookies, analytics, tracking pixels, or any third-party
-              scripts on this Site.
+              <strong className="text-white/80">Analytics cookies:</strong> If you accept cookies
+              via our cookie banner, we use Google Analytics (GA4) to understand how visitors find
+              and use this site. This involves cookies that collect anonymised usage data (pages
+              visited, session duration). No analytics cookies are set if you decline. See our{' '}
+              <a href="/cookies" className="text-av-cyan hover:underline">Cookie Policy</a> for
+              full details. You can change your choice at any time using the &ldquo;Consent
+              Preferences&rdquo; link in the site footer.
+            </p>
+            <p className="mt-3">
+              <strong className="text-white/80">Newsletter:</strong> If you subscribe to our
+              newsletter via this Site, your name and email address are processed by Customer.io
+              to manage the subscription and send emails. Subscription requires explicit consent
+              and you can unsubscribe at any time.
             </p>
           </section>
 

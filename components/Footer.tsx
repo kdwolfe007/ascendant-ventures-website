@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import ConsentPreferencesButton from '@/components/ConsentPreferencesButton';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -27,9 +28,11 @@ export default function Footer() {
 
           {/* Legal + copyright */}
           <div className="flex flex-col items-center md:items-end gap-1.5">
-            <div className="flex items-center gap-4 text-xs text-av-slate/75">
+            <div className="flex flex-wrap items-center gap-4 text-xs text-av-slate/75">
               <Link href="/privacy" className="hover:text-av-slate/70 transition-colors">Privacy Policy</Link>
+              <Link href="/cookies" className="hover:text-av-slate/70 transition-colors">Cookie Policy</Link>
               <Link href="/terms" className="hover:text-av-slate/70 transition-colors">Terms</Link>
+              <Link href="/dsar" className="hover:text-av-slate/70 transition-colors">Data Requests</Link>
             </div>
             <p className="text-av-slate/60 text-xs">
               © {year} Ascendant Ventures Ltd. All rights reserved.
@@ -40,6 +43,10 @@ export default function Footer() {
                 +44 020 4572 2832
               </a>
             </p>
+            <p className="text-av-slate/60 text-xs">
+              ICO Registration: ZB916024
+            </p>
+            <ConsentPreferencesButton />
           </div>
         </div>
       </div>
