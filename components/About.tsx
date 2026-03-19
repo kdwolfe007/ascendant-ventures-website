@@ -1,3 +1,7 @@
+'use client';
+
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 const principles = [
   {
     title: 'Build first.',
@@ -18,15 +22,22 @@ const principles = [
 ];
 
 export default function About() {
+  const { ref: leftRef, isVisible: leftVisible } = useScrollAnimation();
+  const { ref: rightRef, isVisible: rightVisible } = useScrollAnimation({ threshold: 0.08 });
+
   return (
     <section id="about" className="py-14 lg:py-20 relative">
-      {/* Divider line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-av-purple/30" />
 
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* Left — copy */}
-          <div>
+          <div
+            ref={leftRef as React.Ref<HTMLDivElement>}
+            className={`transition-all duration-700 ease-out ${
+              leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
             <p className="text-av-cyan text-xs font-bold tracking-widest uppercase mb-3">About</p>
             <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
               Founder-led.{' '}
@@ -52,11 +63,14 @@ export default function About() {
           </div>
 
           {/* Right — principles */}
-          <div className="space-y-4">
+          <div ref={rightRef as React.Ref<HTMLDivElement>} className="space-y-4">
             {principles.map((p, i) => (
               <div
                 key={p.title}
-                className="bg-space-mid border border-white/5 rounded-xl p-5 hover:border-av-purple/25 transition-colors"
+                className={`bg-space-mid border border-white/5 rounded-xl p-5 transition-all duration-700 ease-out hover:border-av-purple/30 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-av-purple/10 ${
+                  rightVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+                }`}
+                style={{ transitionDelay: rightVisible ? `${i * 100}ms` : '0ms' }}
               >
                 <div className="flex items-start gap-4">
                   <span className="text-av-purple/65 font-mono text-xs mt-1 flex-shrink-0">

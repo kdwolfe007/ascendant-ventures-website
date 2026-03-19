@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface Venture {
   name: string;
@@ -60,13 +63,21 @@ const ventures: Venture[] = [
 ];
 
 export default function Ventures() {
+  const { ref: sectionRef, isVisible: headerVisible } = useScrollAnimation();
+  const { ref: cardsRef, isVisible: cardsVisible } = useScrollAnimation({ threshold: 0.08 });
+
   return (
     <section id="ventures" className="py-14 lg:py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-av-purple/5 to-transparent pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-10">
+        <div
+          ref={sectionRef as React.Ref<HTMLDivElement>}
+          className={`mb-10 transition-all duration-700 ease-out ${
+            headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+          }`}
+        >
           <p className="text-av-cyan text-xs font-bold tracking-widest uppercase mb-3">Portfolio</p>
           <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
             Our ventures
@@ -77,21 +88,28 @@ export default function Ventures() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {ventures.map((v) => (
+        <div
+          ref={cardsRef as React.Ref<HTMLDivElement>}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {ventures.map((v, i) => (
             <div
               key={v.name}
-              className="group relative rounded-2xl p-px overflow-hidden"
+              className={`group relative rounded-2xl p-px overflow-hidden transition-all duration-700 ease-out ${
+                cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
               style={{
                 background: `linear-gradient(135deg, ${v.accent}30, rgba(255,255,255,0.04))`,
+                transitionDelay: cardsVisible ? `${i * 120}ms` : '0ms',
               }}
             >
-              <div className="relative bg-space-mid rounded-2xl p-7 h-full flex flex-col">
+              <div className="relative bg-space-mid rounded-2xl p-7 h-full flex flex-col transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl"
+                style={{ '--hover-shadow': `0 20px 60px ${v.accent}18` } as React.CSSProperties}
+              >
                 {/* Top row */}
                 <div className="flex items-start justify-between mb-6 gap-3">
-                  {/* Logo icon */}
                   <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden p-1.5"
+                    className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden p-1.5 transition-transform duration-300 group-hover:scale-110"
                     style={{ background: v.accentLight }}
                   >
                     <Image
@@ -103,7 +121,6 @@ export default function Ventures() {
                     />
                   </div>
 
-                  {/* Badges */}
                   <div className="flex items-center gap-1.5 flex-wrap justify-end">
                     <span className={`flex items-center gap-1.5 text-xs font-semibold border px-2.5 py-1 rounded-full ${v.statusColor}`}>
                       <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
@@ -139,12 +156,12 @@ export default function Ventures() {
                     href={v.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold transition-all group-hover:gap-3"
+                    className="inline-flex items-center gap-2 text-sm font-semibold transition-all duration-200 group-hover:gap-3"
                     style={{ color: v.accent }}
                   >
                     {v.label}
                     <svg
-                      className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

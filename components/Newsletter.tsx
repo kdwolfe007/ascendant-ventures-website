@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
@@ -38,11 +39,18 @@ export default function Newsletter() {
     }
   }
 
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
     <section className="py-16 lg:py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-av-purple/5 to-transparent pointer-events-none" />
 
-      <div className="relative z-10 max-w-2xl mx-auto px-6 lg:px-8 text-center">
+      <div
+        ref={ref as React.Ref<HTMLDivElement>}
+        className={`relative z-10 max-w-2xl mx-auto px-6 lg:px-8 text-center transition-all duration-700 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <p className="text-av-cyan text-xs font-bold tracking-widest uppercase mb-3">Newsletter</p>
 
         <h2 className="text-3xl lg:text-4xl font-extrabold tracking-tight mb-3">
@@ -69,7 +77,7 @@ export default function Newsletter() {
               placeholder="First name (optional)"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="bg-space-mid border border-white/10 rounded-full px-5 py-3 text-sm text-white placeholder-av-slate/50 focus:outline-none focus:border-av-purple/50 transition-colors"
+              className="bg-space-mid border border-white/10 rounded-full px-5 py-3 text-sm text-white placeholder-av-slate/50 focus:outline-none focus:border-av-purple/60 focus:shadow-[0_0_0_3px_rgba(123,47,247,0.12)] transition-all duration-200"
               disabled={status === 'loading'}
             />
             <input
@@ -78,7 +86,7 @@ export default function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="bg-space-mid border border-white/10 rounded-full px-5 py-3 text-sm text-white placeholder-av-slate/50 focus:outline-none focus:border-av-purple/50 transition-colors"
+              className="bg-space-mid border border-white/10 rounded-full px-5 py-3 text-sm text-white placeholder-av-slate/50 focus:outline-none focus:border-av-purple/60 focus:shadow-[0_0_0_3px_rgba(123,47,247,0.12)] transition-all duration-200"
               disabled={status === 'loading'}
             />
 

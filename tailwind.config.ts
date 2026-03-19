@@ -25,8 +25,10 @@ const config: Config = {
         'hero-glow': 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(123,47,247,0.3), transparent)',
       },
       animation: {
-        'fade-up': 'fadeUp 0.6s ease-out forwards',
-        'fade-in': 'fadeIn 0.8s ease-out forwards',
+        'fade-up': 'fadeUp 0.6s ease-out both',
+        'fade-in': 'fadeIn 0.8s ease-out both',
+        'scale-in': 'scaleIn 0.5s ease-out both',
+        'slide-up': 'slideUp 0.7s ease-out both',
       },
       keyframes: {
         fadeUp: {
@@ -36,6 +38,14 @@ const config: Config = {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.95) translateY(16px)' },
+          '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(40px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
     },

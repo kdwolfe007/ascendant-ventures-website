@@ -17,42 +17,42 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center pt-24 pb-8">
         {/* Eyebrow */}
-        <div className="inline-flex items-center gap-2 border border-av-cyan/20 bg-av-cyan/5 text-av-cyan text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">
+        <div className="animate-fade-up inline-flex items-center gap-2 border border-av-cyan/20 bg-av-cyan/5 text-av-cyan text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">
           <span className="w-1.5 h-1.5 rounded-full bg-av-cyan animate-pulse" />
           Venture Studio
         </div>
 
         {/* Headline */}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6">
+        <h1 className="animate-fade-up delay-100 text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6">
           Building ventures{' '}
           <br className="hidden sm:block" />
           <span className="gradient-text">that matter.</span>
         </h1>
 
         {/* Subhead */}
-        <p className="text-av-slate text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-8">
+        <p className="animate-fade-up delay-200 text-av-slate text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-8">
           Ascendant Ventures is a founder-led studio creating technology companies at the
           intersection of AI, climate resilience, and inclusive design.
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="animate-fade-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#ventures"
-            className="bg-av-gradient text-white font-bold px-8 py-3.5 rounded-full text-base hover:opacity-90 transition-all hover:scale-105 hover:shadow-lg hover:shadow-av-purple/25"
+            className="bg-av-gradient text-white font-bold px-8 py-3.5 rounded-full text-base transition-all duration-200 hover:opacity-90 hover:scale-105 hover:shadow-lg hover:shadow-av-purple/25 active:scale-[0.97]"
           >
             View our ventures
           </a>
           <a
             href="#contact"
-            className="border border-white/15 text-white/80 font-semibold px-8 py-3.5 rounded-full text-base hover:bg-white/5 hover:border-white/30 transition-all"
+            className="border border-white/15 text-white/80 font-semibold px-8 py-3.5 rounded-full text-base transition-all duration-200 hover:bg-white/5 hover:border-white/30 hover:text-white active:scale-[0.97]"
           >
             Get in touch
           </a>
         </div>
 
         {/* Scroll indicator */}
-        <div className="mt-12 flex flex-col items-center gap-2 text-av-slate/60" aria-hidden="true">
+        <div className="animate-fade-up delay-400 mt-12 flex flex-col items-center gap-2 text-av-slate/60" aria-hidden="true">
           <span className="text-xs tracking-widest uppercase">Scroll</span>
           <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />

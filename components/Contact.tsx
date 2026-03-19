@@ -1,3 +1,7 @@
+'use client';
+
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 const reasons = [
   { icon: '🤝', label: 'Partnership opportunities' },
   { icon: '💼', label: 'Investment enquiries' },
@@ -6,13 +10,19 @@ const reasons = [
 ];
 
 export default function Contact() {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
     <section id="contact" className="py-14 lg:py-20 relative">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-av-cyan/3 to-transparent pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-av-purple/8 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <div
+        ref={ref as React.Ref<HTMLDivElement>}
+        className={`relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center transition-all duration-700 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <p className="text-av-cyan text-xs font-bold tracking-widest uppercase mb-3">Contact</p>
         <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
           Let&apos;s talk.
@@ -22,12 +32,15 @@ export default function Contact() {
           we&apos;re always open to a conversation.
         </p>
 
-        {/* Reason chips */}
+        {/* Reason chips with stagger */}
         <div className="flex flex-wrap justify-center gap-3 mb-8">
-          {reasons.map((r) => (
+          {reasons.map((r, i) => (
             <span
               key={r.label}
-              className="flex items-center gap-2 text-sm text-av-slate/80 bg-white/5 border border-white/8 px-4 py-2 rounded-full"
+              className={`flex items-center gap-2 text-sm text-av-slate/80 bg-white/5 border border-white/8 px-4 py-2 rounded-full transition-all duration-500 ease-out hover:bg-white/10 hover:border-white/20 hover:text-white ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}
+              style={{ transitionDelay: isVisible ? `${100 + i * 80}ms` : '0ms' }}
             >
               <span>{r.icon}</span>
               {r.label}
@@ -38,7 +51,7 @@ export default function Contact() {
         {/* CTA */}
         <a
           href="mailto:contact@ascendantventures.co.uk"
-          className="inline-flex items-center gap-2 bg-av-gradient text-white font-bold px-6 py-3 sm:px-10 sm:py-4 rounded-full text-sm sm:text-lg hover:opacity-90 transition-all hover:scale-105 hover:shadow-xl hover:shadow-av-purple/20"
+          className="inline-flex items-center gap-2 bg-av-gradient text-white font-bold px-6 py-3 sm:px-10 sm:py-4 rounded-full text-sm sm:text-lg transition-all duration-200 hover:opacity-90 hover:scale-105 hover:shadow-xl hover:shadow-av-purple/20 active:scale-[0.97]"
         >
           <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

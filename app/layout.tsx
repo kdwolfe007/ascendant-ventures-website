@@ -9,8 +9,8 @@ export const metadata: Metadata = {
     default: 'Ascendant Ventures',
     template: '%s | Ascendant Ventures',
   },
-  description: 'A founder-led venture studio building AI and climate technology companies. Portfolio: Focused Flow, Aithera Labs.',
-  keywords: ['venture studio', 'AI startups', 'climate tech', 'founder-led', 'Kishia Wolfe', 'Focused Flow', 'Aithera Labs'],
+  description: 'A founder-led venture studio building AI and climate technology companies. Portfolio: Focused Flow, Aithera Labs, Paws & Pace.',
+  keywords: ['venture studio', 'AI startups', 'climate tech', 'founder-led', 'Kishia Wolfe', 'Focused Flow', 'Aithera Labs', 'Paws & Pace', 'dog tracker', 'pet health app'],
   authors: [{ name: 'Ascendant Ventures Ltd' }],
   openGraph: {
     type: 'website',
@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     url: 'https://ascendantventures.co.uk',
     siteName: 'Ascendant Ventures',
     title: 'Ascendant Ventures — Founder-Led Venture Studio',
-    description: 'Building AI and climate technology companies that matter.',
+    description: 'Building AI and climate technology companies that matter. Portfolio: Focused Flow, Aithera Labs, Paws & Pace.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Ascendant Ventures',
-    description: 'Building AI and climate technology companies that matter.',
+    description: 'Building AI and climate technology companies that matter. Portfolio: Focused Flow, Aithera Labs, Paws & Pace.',
   },
   icons: {
     icon: '/atransfinal.png',
