@@ -57,8 +57,8 @@ const ventures: Venture[] = [
     statusColor: 'text-amber-400 bg-amber-400/10 border-amber-400/20',
     platforms: ['iOS', 'Android'],
     logo: '/paptransfinal.png',
-    accent: '#F97316',
-    accentLight: 'rgba(249,115,22,0.12)',
+    accent: '#C8956C',
+    accentLight: 'rgba(200,149,108,0.12)',
   },
 ];
 
